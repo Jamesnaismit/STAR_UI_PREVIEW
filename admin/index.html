@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Admin | Star High School</title>
+<link rel="icon" href="/images/logo-64.png"><link rel="stylesheet" href="admin.css"><script src="/js/theme.js"></script></head>
+<body>
+<section id="login" class="login" hidden>
+  <form id="login-form" autocomplete="on">
+    <img src="/images/logo-192.png" alt="Star High School crest" width="84" height="84">
+    <h1>Star High School</h1><p>Admin sign in</p>
+    <label>Username<input name="username" autocomplete="username" required></label>
+    <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+    <p class="err" id="login-err" role="alert"></p>
+    <button class="btn" type="submit">Sign in</button>
+    <p class="back"><a href="/">&larr; Back to the website</a></p>
+  </form>
+</section>
+<div id="app" class="app" hidden>
+  <aside class="side" id="side">
+    <div class="side-brand"><img src="/images/logo-64.png" alt="" width="36" height="36"><div><strong>Star High School</strong><span>Admin panel</span></div></div>
+    <nav id="tabs" aria-label="Admin sections">
+      <button data-tab="dash">Dashboard</button>
+      <button data-tab="apps">Applications<span class="nbadge" id="appbadge" hidden>0</span></button>
+      <button data-tab="form">Admission form</button>
+      <button data-tab="content">Page content</button>
+      <button data-tab="ann">Announcements</button>
+      <button data-tab="gallery">Gallery</button>
+      <button data-tab="team">Our team</button>
+      <button data-tab="account">Account</button>
+    </nav>
+    <div class="side-foot"><div class="themeRow"><span>Dark mode</span><button class="theme" type="button" role="switch" aria-checked="true" aria-label="Dark mode"><span></span></button></div><a href="/" target="_blank" rel="noopener">View website</a><button id="logout" class="ghost">Sign out</button></div>
+  </aside>
+  <div class="main-wrap">
+    <header class="topbar"><button id="burger" class="ghost" aria-label="Menu">Menu</button><h1 id="title">Dashboard</h1></header>
+    <main id="view"></main>
+  </div>
+</div>
+<aside id="drawer" class="drawer" hidden aria-label="Application details"></aside><div id="scrim" class="scrim" hidden></div>
+<dialog id="dlg"><form method="dialog"><p id="dlg-msg"></p><div class="row"><button value="no" class="ghost">Cancel</button><button value="yes" class="danger" id="dlg-ok">Delete</button></div></form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/js/formrender.js"></script>
+<script src="admin.js"></script>
+</body></html>
